@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor | Article preview component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- imported goggle fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- imported font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- link to style.css -->
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <!-- body -->
+  <body
+    class="flex min-h-[100vh] w-full flex-col items-center justify-center bg-[var(--light-grayish-blue)] px-[2.5rem] py-[7rem] font-(family-name:--font-family) text-(length:--font-size) font-(--font-weight-500) text-[var(--grayish-blue)]"
+  >
+    <!-- main -->
+    <main
+      class="max-w-[25rem] rounded-2xl bg-[var(--main-bg-color)] shadow-2xl md:grid md:max-w-[60rem] md:grid-cols-[1.5fr_2fr]"
+    >
+      <!-- image section -->
+      <section>
+        <img
+          src="./images/drawers.jpg"
+          alt="drawers"
+          class="h-full rounded-tl-2xl rounded-tr-2xl md:block md:rounded-l-2xl md:rounded-tr-none"
+        />
+      </section>
+      <!-- content section-->
+      <section class="px-[2.5rem] py-[1.5rem] md:relative">
+        <h2
+          class="my-4 font-(--font-weight-700) text-[var(--very-dark-grayish-blue)] md:text-[1.58rem]"
+        >
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h2>
+        <p class="mr-2 mb-4 md:mb-0 md:text-[1rem]">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <!-- person information -->
+        <div class="md:mt-5 md:mb-0">
+          <!-- person info div -->
+          <div class="info-div flex items-center justify-between">
+            <div class="person-info flex">
+              <img
+                src="./images/avatar-michelle.jpg"
+                alt="Michelle"
+                class="w-[3rem] rounded-[2rem]"
+              />
+              <div class="ml-4">
+                <h3
+                  class="mt-2 leading-4.5 font-[var(--font-weight-700)] text-[var(--very-dark-grayish-blue)] md:mt-0 md:leading-[1.5rem]"
+                >
+                  Michelle Appleton
+                </h3>
+                <time data-date="2008-06-07T17:12Z">28 Jun 2020</time>
+              </div>
+            </div>
+            <button class="share-button">
+              <i
+                class="fa-solid fa-share cursor-pointer rounded-[100%] bg-[var(--light-grayish-blue)] px-3 py-3 text-[1rem] hover:bg-[var(--very-dark-grayish-blue)] hover:text-[var(--main-bg-color)]"
+              ></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- share icons -->
+        <div
+          class="share-icons -mx-[2.5rem] -my-[1.5rem] mt-5 flex items-center justify-center gap-4 rounded-br-2xl rounded-bl-2xl bg-[var(--very-dark-grayish-blue)] px-[2rem] py-4 md:absolute md:top-[48%] md:-right-[3rem] md:w-[19rem] md:rounded-[10px]"
+        >
+          <p class="font-[var|(--font-weight-700)] tracking-[.5rem]">SHARE</p>
+          <a href="https://www.facebook.com/sulley.sadick">
+            <img
+              src="./images/icon-facebook.svg"
+              alt="facebook icon"
+              class="min-w-[1.5rem]"
+            />
+          </a>
+          <a href="https://x.com/QwodjohJ">
+            <img
+              src="./images/icon-twitter.svg"
+              alt="twitter icon"
+              class="min-w-[1.5rem]"
+            />
+          </a>
+          <a href="https://www.instagram.com/?hl=en">
+            <img
+              src="./images/icon-pinterest.svg"
+              alt="pinterest icon"
+              class="mr-[4.3rem] min-w-[1.5rem] md:mr-0"
+            />
+          </a>
+          <button class="md:hidden">
+            <i
+              class="fa-solid fa-share mobile-share-button mr-0.5 cursor-pointer rounded-[100%] bg-[var(--light-grayish-blue)] px-3 py-3 text-[1rem] hover:bg-[var(--grayish-blue)] hover:text-[var(--main-bg-color)]"
+            ></i>
+          </button>
+        </div>
+      </section>
+      <!-- end of section -->
+    </main>
+    <!-- end of main -->
+
+    <!-- footer -->
+    <footer>
+      <div class="my-4 text-center text-[11px] text-black">
+        Challenge by
+        <a
+          class="text-[hsl(228,45%,44%)]"
+          href="https://github.com/Sulley-Sadick"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="#" class="text-[hsl(228,45%,44%)]">Sadick Sulley</a>.
+      </div>
+    </footer>
+    <!-- end of footer -->
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>

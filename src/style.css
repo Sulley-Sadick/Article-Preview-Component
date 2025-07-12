@@ -1,0 +1,45 @@
+/* tailwind imported */
+@import "tailwindcss";
+
+/* root styles */
+@layer base {
+  :root {
+    /* colors */
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --main-bg-color: hsl(0, 100%, 100%);
+
+    /* typography */
+    --font-size: 0.8rem;
+    --font-family: "Manrope", sans-serif;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+  }
+}
+
+/* share icons styles */
+@layer utilities {
+  @media (min-width: 40rem) and (max-width: 57.95rem) {
+    .share-icons {
+      top: 57%;
+    }
+  }
+  @media (min-width: 46rem) {
+    .share-icons::after {
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      right: 45%;
+      width: 20px;
+      height: 20px;
+      border: 10px solid var(--very-dark-grayish-blue);
+      transform: rotate(45deg);
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
