@@ -13,35 +13,41 @@ const closeShareButton = document.querySelector(".mobile-share-button");
 // hiding the shareIcons when the page loads
 shareIcons.classList.add("hidden");
 
-// Function: To update User interface based on screeen size of the window
+// Function: To get the screen width dynamically
 const isMobiie = () => {
   return window.innerWidth <= 768;
 };
 
-//Function: To show or hide the shareIcons and infoContainer based on the screen size or when the page loads
-const updateUserInterface = () => {
-  // mobile view
+// ToggleVisibility: Show user info panel and hide social share icons
+const toggleInfoAndShareIcons = () => {
+  infoContainer.classList.remove("hidden");
+  shareIcons.classList.add("hidden");
+};
+
+// Add Eventlistener to the shareButton
+shareButton.addEventListener("click", () => {
   if (isMobiie()) {
-    infoContainer.classList.toggle("hidden");
-    shareIcons.classList.remove("hidden");
+    // mobile view
+    infoContainer.classList.add("hidden");
+    shareIcons.classList.toggle("hidden");
   } else {
     // desktop view
     infoContainer.classList.remove("hidden");
     shareIcons.classList.toggle("hidden");
   }
-};
+});
 
-// calling the updateUserInterface function so it works when the page loads
-updateUserInterface();
-
-// add EvenListener to the shareButton
-shareButton.addEventListener("click", updateUserInterface);
-
-//upddte user interface based on the screen size
-window.addEventListener("resize", updateUserInterface);
-
-// close share icons
+// Adding eventListener to the closeShareButton
 closeShareButton.addEventListener("click", () => {
-  infoContainer.classList.remove("hidden");
   shareIcons.classList.add("hidden");
+  infoContainer.classList.remove("hidden");
+});
+
+// Adding eventlistener to the window element to change the user interface based on the screen size
+window.addEventListener("resize", () => {
+  if (!isMobiie()) {
+    toggleInfoAndShareIcons();
+  } else {
+    toggleInfoAndShareIcons();
+  }
 });
